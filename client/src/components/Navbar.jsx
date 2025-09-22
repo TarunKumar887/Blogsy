@@ -25,13 +25,13 @@ const DesktopNav = ({ token, role, navigate, handleLogout }) => (
             <>
                 <button 
                     onClick={() => navigate(role === 'admin' ? '/admin' : '/profile/liked')} 
-                    className='flex items-center gap-2 rounded-full text-sm cursor-pointer bg-primary hover:bg-blue-700 text-white px-8 py-2.5 hover:brightness-90 transition-all duration-300'
+                    className='flex items-center gap-2 rounded-full text-sm cursor-pointer bg-primary text-white px-8 py-2.5 hover:brightness-90 transition-all duration-300'
                 >
                     {role === 'admin' ? 'Dashboard' : 'Profile'} <img src={assets.arrow} className="w-3" alt="arrow" />
                 </button>
                 <button 
                     onClick={handleLogout} 
-                    className='flex items-center gap-2 rounded-full text-sm cursor-pointer border border-red-500 text-white bg-red-500 px-8 py-2.5 hover:bg-red-700 hover:text-white transition'
+                    className='flex items-center gap-2 rounded-full text-sm cursor-pointer border border-red-500 text-red-500 px-8 py-2.5 hover:bg-red-500 hover:text-white transition'
                 >
                     Logout
                 </button>
@@ -86,14 +86,14 @@ const Navbar = () => {
     return (
         <nav className='sticky top-0 z-10 bg-blue-50 shadow-md'>
             <div className='flex justify-between items-center py-4 px-4 sm:px-8 xl:px-32'>
-                <div className="sm:hidden flex items-center">
+                <img onClick={() => navigate('/')} src={assets.logo} alt="logo" className='w-36 sm:w-44 cursor-pointer' />
+
+                <div className="sm:hidden">
                     <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="p-2">
                         {isMobileMenuOpen ? <FaTimes size={22} /> : <FaBars size={22} />}
                     </button>
                 </div>
-
-                <img onClick={() => navigate('/')} src={assets.logo} alt="logo" className='w-36 sm:w-44 cursor-pointer'/>
-
+                
                 <DesktopNav token={token} role={role} navigate={navigate} handleLogout={handleLogout} />
             </div>
 
