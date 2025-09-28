@@ -11,8 +11,8 @@
 
 ## 🌐 Live Demo  
 
-- 🔗 **Frontend**: [Link to your deployed frontend]  
-- 🔗 **Backend**: [Link to your deployed backend]  
+- 🔗 **Frontend**: https://blogsy-psi.vercel.app/
+- 🔗 **Backend**: https://blogsy-server-eight.vercel.app/  
 
 ---
 
@@ -106,3 +106,4 @@ npm install
 
 npm run dev
 ```
+
