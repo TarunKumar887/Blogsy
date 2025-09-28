@@ -89,9 +89,12 @@ npm install
 # Create a .env file and add your variables:
 # MONGODB_URI=
 # JWT_SECRET=
+# ADMIN_EMAIL= 
+# ADMIN_PASSWORD= 
 # IMAGEKIT_PUBLIC_KEY=
 # IMAGEKIT_PRIVATE_KEY=
-# GOOGLE_GEMINI_API_KEY=
+# IMAGEKIT_URL_ENDPOINT=
+# GEMINI_API_KEY=
 
 npm start
 ```
@@ -106,4 +109,5 @@ npm install
 
 npm run dev
 ```
+
 
